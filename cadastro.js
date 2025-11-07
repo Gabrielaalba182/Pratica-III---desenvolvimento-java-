@@ -1,4 +1,4 @@
-import { escapeHtml } from '../templates.js';
+import { escapeHtml } from 'templates.js';
 import { load } from '../storage.js';
 
 export default async function page() {
