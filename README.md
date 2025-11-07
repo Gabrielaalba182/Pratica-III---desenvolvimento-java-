@@ -1,4 +1,4 @@
-Prática III – Aplicação Web Dinâmica com JavaScript Avançado
+🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado
 Este projeto foi desenvolvido como parte da Experiência Prática III, com foco em JavaScript Avançado, manipulação do DOM, eventos, armazenamento local e criação de uma SPA (Single Page Application) simples.
 
 🎯 Objetivo 
