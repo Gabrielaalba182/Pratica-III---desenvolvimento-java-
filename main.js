@@ -1,4 +1,4 @@
-import { initRouter } from 'router.js';
+import { initRouter } from './router.js';
 import { setupGlobalHandlers } from './forms.js';
 
 document.addEventListener('DOMContentLoaded', () => {
