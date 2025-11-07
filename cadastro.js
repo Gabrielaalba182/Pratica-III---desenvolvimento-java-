@@ -1,5 +1,5 @@
-import { escapeHtml } from 'templates.js';
-import { load } from '../storage.js';
+import { escapeHtml } from './templates.js';
+import { load } from './storage.js';
 
 export default async function page() {
   const cadastros = load('cadastros', []);
