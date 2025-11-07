@@ -9,11 +9,3 @@ Esta aplicação foi desenvolvida em **JavaScript Avançado**, com manipulação
 
 👉 [Clique aqui para abrir o projeto publicado no GitHub Pages](https://gabrielaalba182.github.io/Pratica-III---desenvolvimento-java-/)
 
----
-
-## 💻 Visualizar o Projeto Localmente
-
-Você também pode abrir o arquivo **index.html** diretamente no navegador:  
-👉 [Abrir o arquivo index.html](./index[1].html)
-
-*(Esse link funciona quando você visualiza o projeto no GitHub ou localmente no VS Code / navegador.)*
