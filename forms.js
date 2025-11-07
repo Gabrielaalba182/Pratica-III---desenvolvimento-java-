@@ -1,4 +1,4 @@
-import { save, load } from './storage.js';
+import { save, load } from 'storage.js';
 
 function createError(element, message) {
   let em = element.nextElementSibling;
