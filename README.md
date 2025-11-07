@@ -14,6 +14,6 @@ Esta aplicação foi desenvolvida em **JavaScript Avançado**, com manipulação
 ## 💻 Visualizar o Projeto Localmente
 
 Você também pode abrir o arquivo **index.html** diretamente no navegador:  
-👉 [Abrir o arquivo index.html](./index.html)
+👉 [Abrir o arquivo index.html](./index[1].html)
 
 *(Esse link funciona quando você visualiza o projeto no GitHub ou localmente no VS Code / navegador.)*
