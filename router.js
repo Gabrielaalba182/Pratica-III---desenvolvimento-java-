@@ -1,4 +1,4 @@
-import { render } from 'templates.js';
+import { render } from './templates.js';
 
 const routes = {
   '/': () => import('home.js'),
