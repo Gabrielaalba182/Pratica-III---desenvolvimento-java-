@@ -1,100 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="3;url=https://gabrielaalba182.github.io/Pratica-III---desenvolvimento-java-/">
-  <title>🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado</title>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #00bfa6, #0b5);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 700px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-      animation: fadeIn 1s ease-in-out;
-    }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 25px;
-      font-size: 1.3em;
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      display: inline-block;
-      padding-bottom: 4px;
-    }
-    p, ul {
-      font-size: 1.05em;
-      line-height: 1.6em;
-    }
-    ul {
-      text-align: left;
-      display: inline-block;
-    }
-    a {
-      color: #fffa;
-      font-weight: bold;
-    }
-    .redirect {
-      margin-top: 20px;
-      font-style: italic;
-      opacity: 0.8;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+<head>  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Instituto Esperança — Início</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="container">
-    <h1>🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado</h1>
-    <p>
-      Este projeto foi desenvolvido como parte da <strong>Experiência Prática III</strong>,
-      com foco em <strong>JavaScript Avançado</strong>, manipulação do <strong>DOM</strong>,
-      <strong>eventos</strong>, <strong>armazenamento local</strong> e criação de uma
-      <strong>SPA (Single Page Application)</strong> simples.
-    </p>
+<body>  <div class="app">
+  
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="brand" aria-label="Instituto Esperança">
+        <h1>Instituto Esperança</h1>
+      </div>
+      <nav class="site-nav" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li class="nav-item"><a href="index.html">Início</a></li>
+          <li class="nav-item"><a href="projetos.html">Projetos</a>
+            <div class="dropdown" role="menu" aria-hidden="true">
+              <a href="projetos.html#voluntariado">Voluntariado</a><br>
+              <a href="projetos.html#educacao">Educação</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
 
-    <h2>🎯 Objetivo</h2>
-    <ul>
-      <li>Manipulação do DOM via JavaScript;</li>
-      <li>Sistema de rotas SPA (sem recarregar a página);</li>
-      <li>Validação de formulários com mensagens de erro;</li>
-      <li>Armazenamento de dados com <strong>LocalStorage</strong>;</li>
-      <li>Código modular e bem organizado.</li>
-    </ul>
-
-    <h2>⚙️ Funcionalidades</h2>
-    <ul>
-      <li><strong>Home:</strong> página inicial de boas-vindas;</li>
-      <li><strong>Cadastro:</strong> formulário com validação e armazenamento local;</li>
-      <li><strong>Sobre:</strong> informações sobre o projeto.</li>
-    </ul>
-
-    <div class="redirect">
-      <p>🔄 Redirecionando para o projeto em 3 segundos...</p>
-      <p>Se não for redirecionado automaticamente, 
-        <a href="https://gabrielaalba182.github.io/Pratica-III---desenvolvimento-java-/">clique aqui</a>.
-      </p>
+      <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        ☰
+      </button>
     </div>
+  </header>
+
+  <main class="site-main"><div class="container">
+    <h2>Quem somos</h2>
+    <p>Organização sem fins lucrativos dedicada a projetos sociais em educação, saúde e meio ambiente.</p>
+    <img src= "voluntariado11.jpg" alt="Imagem do projeto">
+  </div></main>
+  <footer class="site-footer"><div class="container"><p>&copy; Instituto Esperança</p></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+<script src="main.js" type="javascript"></script>
+
+  <script>
+    (function(){
+      var btn = document.querySelector(".hamburger");
+      var nav = document.querySelector('.site-nav');
+      btn && btn.addEventListener('click', function(){
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        if(nav.style.display === 'flex') { nav.style.display='none'; }
+        else { nav.style.display='flex'; nav.style.flexDirection='column'; nav.style.gap='12px'; }
+      });
+      // close dropdowns on outside click (basic)
+      document.addEventListener('click', function(e){
+        if(!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.nav-item .dropdown').forEach(function(d){ d.style.display='none'; });
+        }
+      });
+      document.querySelectorAll('.nav-item').forEach(function(item){
+        item.addEventListener('mouseenter', function(){ var dd=this.querySelector('.dropdown'); dd && (dd.style.display='block'); });
+        item.addEventListener('mouseleave', function(){ var dd=this.querySelector('.dropdown'); dd && (dd.style.display='none'); });
+      });
+    })();
+  </script>
   </div>
-</body>
+  <script src="main.js"></script></body>
+</html>
 </html>
