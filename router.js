@@ -1,9 +1,9 @@
 import { render } from 'templates.js';
 
 const routes = {
-  '/': () => import('./pages/home.js'),
-  '/cadastro': () => import('./pages/cadastro.js'),
-  '/sobre': () => import('./pages/about.js'),
+  '/': () => import('home.js'),
+  '/cadastro': () => import('cadastro.js'),
+  '/sobre': () => import('about.js'),
 };
 
 function parseLocation() {
