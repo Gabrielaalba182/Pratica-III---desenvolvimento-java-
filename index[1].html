@@ -1,70 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Instituto Esperança — Início</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>  <div class="app">
-  
-  <header class="site-header" role="banner">
-    <div class="container">
-      <div class="brand" aria-label="Instituto Esperança">
-        <h1>Instituto Esperança</h1>
-      </div>
-      <nav class="site-nav" role="navigation" aria-label="Menu principal">
-        <ul>
-          <li class="nav-item"><a href="index.html">Início</a></li>
-          <li class="nav-item"><a href="projetos.html">Projetos</a>
-            <div class="dropdown" role="menu" aria-hidden="true">
-              <a href="projetos.html#voluntariado">Voluntariado</a><br>
-              <a href="projetos.html#educacao">Educação</a>
-            </div>
-          </li>
-          <li class="nav-item"><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado</title>
 
-      <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
-        ☰
-      </button>
-    </div>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#/" data-link>Home</a>
+      <a href="#/cadastro" data-link>Cadastro</a>
+      <a href="#/sobre" data-link>Sobre</a>
+    </nav>
   </header>
 
-  <main class="site-main"><div class="container">
-    <h2>Quem somos</h2>
-    <p>Organização sem fins lucrativos dedicada a projetos sociais em educação, saúde e meio ambiente.</p>
-    <img src= "voluntariado11.jpg" alt="Imagem do projeto">
-  </div></main>
-  <footer class="site-footer"><div class="container"><p>&copy; Instituto Esperança</p></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <main id="app"></main>
 
-<script src="main.js" type="javascript"></script>
+  <template id="toast-template">
+    <div class="toast"></div>
+  </template>
 
-  <script>
-    (function(){
-      var btn = document.querySelector(".hamburger");
-      var nav = document.querySelector('.site-nav');
-      btn && btn.addEventListener('click', function(){
-        var expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', String(!expanded));
-        if(nav.style.display === 'flex') { nav.style.display='none'; }
-        else { nav.style.display='flex'; nav.style.flexDirection='column'; nav.style.gap='12px'; }
-      });
-      // close dropdowns on outside click (basic)
-      document.addEventListener('click', function(e){
-        if(!e.target.closest('.nav-item')) {
-          document.querySelectorAll('.nav-item .dropdown').forEach(function(d){ d.style.display='none'; });
-        }
-      });
-      document.querySelectorAll('.nav-item').forEach(function(item){
-        item.addEventListener('mouseenter', function(){ var dd=this.querySelector('.dropdown'); dd && (dd.style.display='block'); });
-        item.addEventListener('mouseleave', function(){ var dd=this.querySelector('.dropdown'); dd && (dd.style.display='none'); });
-      });
-    })();
-  </script>
-  </div>
-  <script src="main.js"></script></body>
-</html>
+  <script type="module" src="js/main.js"></script>
+</body>
 </html>
