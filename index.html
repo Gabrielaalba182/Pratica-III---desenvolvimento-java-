@@ -1,92 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="3;url=https://gabrielaalba182.github.io/Pratica-III---desenvolvimento-java-/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado</title>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #00bfa6, #0b5);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 700px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin-top: 25px;
-      font-size: 1.3em;
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      display: inline-block;
-      padding-bottom: 4px;
-    }
-    p, ul {
-      font-size: 1.05em;
-      line-height: 1.5em;
-    }
-    ul {
-      text-align: left;
-      display: inline-block;
-    }
-    a {
-      color: #fffa;
-      font-weight: bold;
-    }
-    .redirect {
-      margin-top: 20px;
-      font-style: italic;
-      opacity: 0.8;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🧩 Prática III – Aplicação Web Dinâmica com JavaScript Avançado</h1>
-    <p>
-      Este projeto foi desenvolvido como parte da <strong>Experiência Prática III</strong>,
-      com foco em <strong>JavaScript Avançado</strong>, manipulação do <strong>DOM</strong>,
-      <strong>eventos</strong>, <strong>armazenamento local</strong> e criação de uma
-      <strong>SPA (Single Page Application)</strong> simples.
-    </p>
+  <header>
+    <nav>
+      <a href="#/" data-link>Home</a>
+      <a href="#/cadastro" data-link>Cadastro</a>
+      <a href="#/sobre" data-link>Sobre</a>
+    </nav>
+  </header>
 
-    <h2>🎯 Objetivo</h2>
-    <ul>
-      <li>Manipulação do DOM via JavaScript</li>
-      <li>Sistema de rotas SPA (sem recarregar a página)</li>
-      <li>Validação de formulários com mensagens de erro</li>
-      <li>Armazenamento de dados com <strong>LocalStorage</strong></li>
-      <li>Código modular e bem organizado</li>
-    </ul>
+  <main id="app"></main>
 
-    <h2>⚙️ Funcionalidades</h2>
-    <ul>
-      <li><strong>Home:</strong> página inicial simples de boas-vindas</li>
-      <li><strong>Cadastro:</strong> formulário com validação e armazenamento local</li>
-      <li><strong>Sobre:</strong> informações do projeto</li>
-    </ul>
+  <template id="toast-template">
+    <div class="toast"></div>
+  </template>
 
-    <div class="redirect">
-      <p>🔄 Redirecionando para o projeto em 3 segundos...</p>
-      <p>Se não for redirecionado automaticamente, <a href="index.html">clique aqui</a>.</p>
-    </div>
-  </div>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
